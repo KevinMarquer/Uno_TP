@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+	<feature automatic="selected" name="UNO"/>
+	<feature automatic="selected" name="UNO_Rule"/>
+	<feature automatic="unselected" name="UnoRapido"/>
+	<feature automatic="unselected" name="pioche"/>
+	<feature automatic="unselected" name="Confusion"/>
+	<feature automatic="unselected" name="Defense"/>
+	<feature automatic="unselected" name="Rapido"/>
+	<feature automatic="unselected" name="CarteUno"/>
+	<feature automatic="selected" manual="selected" name="UNOClassic"/>
+	<feature name="UNO_Challenge"/>
+	<feature name="Cartes0_7"/>
+	<feature name="CarteIdentique"/>
+	<feature name="AvecCouleur"/>
+	<feature name="CumulAjout"/>
+	<feature name="Plus2"/>
+	<feature name="Plus4"/>
+	<feature automatic="selected" manual="selected" name="Suite"/>
+	<feature manual="selected" name="SuiteSimple"/>
+	<feature automatic="unselected" name="SuiteRoyale"/>
+	<feature name="Pioche"/>
+	<feature name="More4"/>
+	<feature name="TempsLimite"/>
+	<feature name="MauvaiseCarte"/>
+	<feature name="équipe"/>
+	<feature name="CartesVisibles"/>
+	<feature name="FinManche"/>
+	<feature name="Rest1Carte"/>
+	<feature name="AuMoins4CartesmemeChiffre"/>
+	<feature name="ThreeHands"/>
+	<feature name="ThreePiles"/>
+	<feature name="gameOver"/>
+	<feature name="avoir500"/>
+	<feature name="nePasAvoir500"/>
+	<feature name="nombreMancheGagné"/>
+	<feature automatic="unselected" name="UnoOlympique"/>
+	<feature automatic="unselected" name="TribunalPopulaire"/>
+	<feature automatic="unselected" name="Penalité"/>
+	<feature automatic="unselected" name="MotBannie"/>
+	<feature automatic="unselected" name="Politesse"/>
+	<feature automatic="unselected" name="JeuxImporte"/>
+	<feature automatic="unselected" name="DistributionAléa"/>
+	<feature automatic="unselected" name="SensDéfini"/>
+	<feature automatic="unselected" name="ChgDonneur"/>
+	<feature automatic="unselected" name="VueDesCartesAprès1erPose"/>
+	<feature automatic="unselected" name="DonneurPremierPose"/>
+	<feature automatic="unselected" name="JeuRapide"/>
+	<feature automatic="unselected" name="Interception"/>
+	<feature automatic="unselected" name="DeuxCartesIdentiques"/>
+	<feature automatic="unselected" name="DécisionCarte"/>
+	<feature automatic="unselected" name="Surenchère"/>
+	<feature automatic="unselected" name="Carte0"/>
+	<feature automatic="unselected" name="Carte7"/>
+	<feature automatic="unselected" name="Carte2"/>
+	<feature automatic="unselected" name="ValeurCarte"/>
+	<feature automatic="unselected" name="SpecialCard"/>
+	<feature automatic="unselected" name="Roulette"/>
+	<feature automatic="unselected" name="Showdown"/>
+	<feature automatic="unselected" name="UnoWizz"/>
+	<feature automatic="unselected" name="presquUno"/>
+	<feature automatic="unselected" name="chiffremoins"/>
+	<feature automatic="unselected" name="couleurMoins"/>
+	<feature automatic="unselected" name="carteRouge"/>
+	<feature automatic="unselected" name="carteBleu"/>
+	<feature automatic="unselected" name="Echange"/>
+	<feature automatic="unselected" name="MainVisible"/>
+	<feature automatic="unselected" name="unoWizz"/>
+	<feature automatic="unselected" name="War"/>
+	<feature automatic="selected" name="NombreDeJoueurs"/>
+	<feature automatic="unselected" name="deux"/>
+	<feature automatic="unselected" name="invers_passerTour"/>
+	<feature manual="selected" name="trois"/>
+	<feature automatic="unselected" name="quatre"/>
+	<feature automatic="unselected" name="cinq"/>
+	<feature automatic="unselected" name="six"/>
+	<feature automatic="unselected" name="sept"/>
+	<feature automatic="unselected" name="huit"/>
+</configuration>

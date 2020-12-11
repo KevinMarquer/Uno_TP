@@ -1,0 +1,59 @@
+
+{
+"Uno":
+	{ 
+	"Uno_rule": { 
+		"name":"UnoRapido",
+		"rules":[{
+			"pioche":true,
+			"confusion":true,
+			"defense":true,
+			"rapido":true,
+			"carteUno":true
+			}]
+		},
+	"nombrejoueur": 3
+	}
+}
+
+
+{ 
+	"Uno_2:
+	{ 
+		"Uno_rule":	{ 
+			"name":"UnoClassic",
+			"Rules":[ { 
+				"UnoChallenge":true,
+				"Carte0/7":false,
+				CarteIdentique:{ 
+					"value":true,
+					"avecCouleur":false
+					}
+				CumulAjout:{ 
+				"value":true,
+				"plus2":true,
+				"plus4":false
+				}
+				"Suite":false,
+				"Pioche":true,
+				"More4":true,
+				"TempsLimite":false,
+				"SpecialCard":false
+				"MauvaiseCarte":true,
+				"Equipe":false,
+				"CartesVisibles":false,
+				"FinManche":{ 
+					"value":true,
+					"type":"Reste1Carte"
+					}
+				"ThreeHands":false,
+				"ThreePiles":false,
+				"GameOver":{ 
+					"Type":"NePasAvoir500"
+					}
+				}]
+			}
+		"NombreDeJoueur": 6
+		}
+	}
+

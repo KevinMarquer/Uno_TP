@@ -1,0 +1,9 @@
+grammar org.xtext.example.unotext.UnoText with org.eclipse.xtext.common.Terminals
+
+generate unoText "http://www.xtext.org/example/unotext/UnoText"
+
+Model:
+	greetings+=Greeting*;
+	
+Greeting:
+	'Hello' name=ID '!';

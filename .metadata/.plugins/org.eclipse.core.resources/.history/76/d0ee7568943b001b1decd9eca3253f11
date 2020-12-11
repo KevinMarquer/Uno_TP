@@ -1,0 +1,21 @@
+
+{
+"uno": [ 
+	{ 
+	"Uno_rule": "UnoOlympique,
+	"nombrejoueur": 3
+	}
+	]
+
+}
+
+{
+    "titre_album"
+       :"Abacab",
+    "groupe"
+       :"Genesis",
+    "annee"
+       :1981,
+    "genre"
+       :"Rock"
+ }

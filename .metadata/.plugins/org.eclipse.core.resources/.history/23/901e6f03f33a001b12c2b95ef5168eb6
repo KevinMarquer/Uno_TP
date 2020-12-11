@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel>
+	<properties>
+		<graphics key="legendautolayout" value="true"/>
+		<graphics key="showshortnames" value="false"/>
+		<graphics key="layout" value="horizontal"/>
+		<graphics key="showcollapsedconstraints" value="true"/>
+		<graphics key="legendhidden" value="false"/>
+		<graphics key="layoutalgorithm" value="1"/>
+	</properties>
+	<struct>
+		<and mandatory="true" name="UNO">
+			<alt mandatory="true" name="UNO_Rule">
+				<graphics key="collapsed" value="false"/>
+				<and name="UnoRapido">
+					<feature mandatory="true" name="pioche"/>
+					<feature mandatory="true" name="Confusion"/>
+					<feature mandatory="true" name="Defense"/>
+					<feature mandatory="true" name="Rapido"/>
+					<feature mandatory="true" name="CarteUno"/>
+				</and>
+				<and name="UNOClassic">
+					<graphics key="collapsed" value="false"/>
+					<feature name="UNO_Challenge"/>
+					<feature name="Cartes0_7"/>
+					<and name="CarteIdentique">
+						<feature name="AvecCouleur"/>
+					</and>
+					<or name="CumulAjout">
+						<feature name="Plus2"/>
+						<feature name="Plus4"/>
+					</or>
+					<alt name="Suite">
+						<feature name="SuiteSimple"/>
+						<feature name="SuiteRoyale"/>
+					</alt>
+					<feature name="Pioche"/>
+					<feature name="More4"/>
+					<feature name="TempsLimite"/>
+					<feature name="MauvaiseCarte"/>
+					<feature name="équipe"/>
+					<feature name="CartesVisibles"/>
+					<alt name="FinManche">
+						<feature name="Rest1Carte"/>
+						<feature name="AuMoins4CartesmemeChiffre"/>
+					</alt>
+					<feature name="ThreeHands"/>
+					<feature name="ThreePiles"/>
+					<alt name="gameOver">
+						<feature name="avoir500"/>
+						<feature name="nePasAvoir500"/>
+						<feature name="nombreMancheGagné"/>
+					</alt>
+				</and>
+				<and name="UnoOlympique">
+					<and mandatory="true" name="TribunalPopulaire">
+						<feature mandatory="true" name="Penalité"/>
+						<feature mandatory="true" name="MotBannie"/>
+						<feature mandatory="true" name="Politesse"/>
+						<feature mandatory="true" name="JeuxImporte"/>
+					</and>
+					<feature mandatory="true" name="DistributionAléa"/>
+					<feature mandatory="true" name="SensDéfini"/>
+					<feature mandatory="true" name="ChgDonneur"/>
+					<feature mandatory="true" name="VueDesCartesAprès1erPose"/>
+					<feature mandatory="true" name="DonneurPremierPose"/>
+					<feature mandatory="true" name="JeuRapide"/>
+					<feature mandatory="true" name="Interception"/>
+					<feature mandatory="true" name="DeuxCartesIdentiques"/>
+					<feature mandatory="true" name="DécisionCarte"/>
+					<feature mandatory="true" name="Surenchère"/>
+					<feature name="Carte0"/>
+					<feature name="Carte7"/>
+					<feature mandatory="true" name="Carte2"/>
+					<feature mandatory="true" name="ValeurCarte"/>
+				</and>
+				<alt name="SpecialCard">
+					<feature name="Roulette"/>
+					<feature name="Showdown"/>
+				</alt>
+				<and name="UnoWizz">
+					<feature mandatory="true" name="presquUno"/>
+					<feature mandatory="true" name="chiffremoins"/>
+					<feature mandatory="true" name="couleurMoins"/>
+					<feature mandatory="true" name="carteRouge"/>
+					<feature mandatory="true" name="carteBleu"/>
+					<feature mandatory="true" name="Echange"/>
+					<feature mandatory="true" name="MainVisible"/>
+					<feature mandatory="true" name="unoWizz"/>
+					<feature mandatory="true" name="War"/>
+				</and>
+			</alt>
+			<alt mandatory="true" name="NombreDeJoueurs">
+				<and name="deux">
+					<feature mandatory="true" name="invers_passerTour"/>
+					<feature mandatory="true" name="plus2EtPlus4"/>
+				</and>
+				<feature name="trois"/>
+				<feature name="quatre"/>
+				<feature name="cinq"/>
+				<feature name="six"/>
+				<feature name="sept"/>
+				<feature name="huit"/>
+			</alt>
+		</and>
+	</struct>
+	<constraints>
+		<rule>
+			<disj>
+				<var>UNO_Rule</var>
+			</disj>
+		</rule>
+	</constraints>
+</featureModel>

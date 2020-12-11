@@ -1,0 +1,105 @@
+
+{ 
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title":"Uno",
+	"description":"Choix des règles de Uno",
+	"types":"Object",
+	"properties":{ 
+			"Uno_rules":{ 
+				"description":"Règles de Uno",
+				"oneOf":[ 
+					{ 
+						"name":"UnoRapido",
+						"rules":[ 
+							{
+						 		"pioche":true,
+						 		"confusion":true,
+						 		"defense":true,
+						 		"rapido":true,
+						 		"carteUno":true
+							}
+						]
+					},
+					{ 
+						"name":"UnoOlympique",
+						"rules":[
+							{
+								 "TribunalPopulaire":[
+								 	{
+								 		"Penalité":true,
+								 		"MotBannie":true,
+								 		"Politesse":true,
+								 		"JeuxImporte":true
+								 	}
+								 ],
+								 "distributionAléa":true,
+								 "SensDéfinie":true,
+								 "ChgDonneur":true,
+								 "VueDesCartesAprès1erPose":true,
+								 "DonneurPremierPose":true,
+								 "JeuRapide":true ,
+								 "Interception":true,
+								 "DeuxCartesIdentiques":true,
+								 "DécisionCarte":true,
+								 "Surenchère":true,
+								 "Carte0":boolean,
+								 "Carte7":boolean,
+								 "Carte2":true,
+								 "ValeurCarte":true
+							}
+						]
+					}
+				],
+			},
+			"NombreDeJoueur":{ 
+				"description":"Nombre de joueur dans la partie",
+				"type":"Integer"}
+			
+	},
+	"definition":{ 
+	},
+	"required":["Uno_rules", "NombreDeJoueur"]}
+}
+
+
+
+
+
+
+
+
+
+{
+  "$id": "https://example.com/arrays.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "A representation of a person, company, organization, or place",
+  "type": "object",
+  "properties": {
+    "fruits": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "vegetables": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/veggie" }
+    }
+  },
+  "definitions": {
+    "veggie": {
+      "type": "object",
+      "required": [ "veggieName", "veggieLike" ],
+      "properties": {
+        "veggieName": {
+          "type": "string",
+          "description": "The name of the vegetable."
+        },
+        "veggieLike": {
+          "type": "boolean",
+          "description": "Do I like this vegetable?"
+        }
+      }
+    }
+  }
+}

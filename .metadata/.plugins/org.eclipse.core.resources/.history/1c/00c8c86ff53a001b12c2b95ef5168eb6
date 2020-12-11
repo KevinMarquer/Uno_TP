@@ -1,0 +1,51 @@
+grammar org.xtext.example.unotext.UnoText with org.eclipse.xtext.common.Terminals
+
+generate unoText "http://www.xtext.org/example/unotext/UnoText"
+
+Uno:
+	uno+=Uno_Rule + NombreJoueurs;
+	
+Uno_Rule:
+	Uno_Classic | UnoOlypique | UnoWizz | UnoRapido;
+
+NombreJoueurs:
+		'Nombre de joueur'
+	;
+	
+Uno_Classic:
+	'Uno Classic' 
+;
+
+UnoOlypique:
+	'UnoOlympique' 
+	+ TribunalPopulaire 
+	+ DistributionAléatoire 
+	+ SensDéfini 
+	+ ChangementDonneur 
+	+ VueDesCartesAprès1erPose 
+	+ DonneurPremierose
+	+JeuRapide 
+	+ Interception 
+	+ DeuxCartesIdentiques 
+	+ DécisionCarte 
+	+ Surenchère 
+	+ Carte0? 
+	+ Carte7? + 
+	Carte2 + ValeurCarte
+;
+
+TribunalPopulaire:
+	'TribunalPopulaire' + Penalite + MotBannis + Politesse + JeuxImporte
+;
+
+Penalite:
+	'Pénalité :'
+;
+
+UnoWizz:
+	
+;
+
+UnoRapido:
+	
+;

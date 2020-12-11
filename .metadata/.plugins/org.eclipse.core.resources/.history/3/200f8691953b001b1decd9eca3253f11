@@ -1,0 +1,19 @@
+
+{
+"Uno":
+	{ 
+	"Uno_rule": { 
+		"name":"UnoRapido",
+		"rules":[{
+			"pioche":true,
+			"confusion":true,
+			"defense":true,
+			"rapido":true,
+			"carteUno":true
+			}]
+		}
+	"nombrejoueur": 3
+	},
+}
+	
+

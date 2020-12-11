@@ -1,0 +1,60 @@
+grammar org.xtext.example.unotext.UnoText with org.eclipse.xtext.common.Terminals
+
+generate unoText "http://www.xtext.org/example/unotext/UnoText"
+
+Uno:
+	uno+=Uno_Rule + NombreJoueurs;
+	
+Uno_Rule:
+	Uno_Classic | UnoOlypique | UnoWizz | UnoRapido;
+
+NombreJoueurs:
+		'Nombre de joueur'
+	;
+	
+Uno_Classic:
+	'Uno Classic' 
+;
+
+UnoOlypique:
+	'UnoOlympique' 
+	+ TribunalPopulaire = "TribunalPopulaire"
+	+ DistributionAleatoire = "DistributionAleatoire"
+	+ SensDefini = "SensDefini"
+	+ ChangementDonneur = "ChangementDonneur"
+	+ VueDesCartesApres1erPose = "VueDesCartesApres1erPose" 
+	+ DonneurPremierose = "DonneurPremierose"
+	+ JeuRapide = "JeuRapide"
+	+ Interception = "Interception"
+	+ DeuxCartesIdentiques = "DeuxCartesIdentiques" 
+	+ DecisionCarte = "DecisionCarte"
+	+ Surenchere = "Surenchere"
+	+ (cartezero?= "Carte0"?)
+	+ (CarteSept?= "Carte7"?)
+	+ Carte2 = "Carte2"
+	+ ValeurCarte = "ValeurCarte"
+;
+
+
+UnoWizz:
+	"UnoWizz"
+	+ presquUno = "presquUno"
+	+ chiffreMoins = "chiffreMoins"
+	+ couleurMoins =  "couleurMoins"
+	+ carteRouge = "carteRouge"
+	+ "carteBleue"
+	+ "echange"
+	+ "mainVisible"
+	+ "unoWizz"
+	+ "War"
+;
+
+UnoRapido:
+	"UnoRapido"
+	+ "Pioche"
+	+ "Confusion"
+	+ "Defense"
+	+"Rapido"
+	+ "CarteUno"
+;
+

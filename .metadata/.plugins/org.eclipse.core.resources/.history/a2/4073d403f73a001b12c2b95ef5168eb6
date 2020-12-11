@@ -1,0 +1,110 @@
+grammar org.xtext.example.unotext.UnoText with org.eclipse.xtext.common.Terminals
+
+generate unoText "http://www.xtext.org/example/unotext/UnoText"
+
+Uno:
+	uno+=Uno_Rule + NombreJoueurs;
+	
+Uno_Rule:
+	Uno_Classic | UnoOlypique | UnoWizz | UnoRapido;
+
+NombreJoueurs:
+		'Nombre de joueur'
+	;
+	
+Uno_Classic:
+	'Uno Classic' 
+;
+
+UnoOlypique:
+	'UnoOlympique' 
+	+ TribunalPopulaire = "TribunalPopulaire"
+	+ DistributionAleatoire = "DistributionAleatoire"
+	+ SensDefini = "SensDefini"
+	+ ChangementDonneur = "ChangementDonneur"
+	+ VueDesCartesApres1erPose = "VueDesCartesApres1erPose" 
+	+ DonneurPremierose = "DonneurPremierose"
+	+ JeuRapide = "JeuRapide"
+	+ Interception = "Interception"
+	+ DeuxCartesIdentiques 
+	+ DecisionCarte 
+	+ Surenchere 
+	+ Cartezero?
+	+ CarteSept? 
+	+ Carte2 
+	+ ValeurCarte
+;
+
+
+Penalite:
+	'Pénalité : true'
+;
+
+MotBannis:
+	'MotBannis : true'
+;
+Politesse:
+	'Politesse : true'
+;
+JeuxImporte :
+	'JeuxImporte : true'
+;
+
+DistributionAleatoire:
+	'DistributionAleatoire : true'
+;
+
+SensDefini:
+	'SensDefini : true'
+;
+
+ChangementDonneur : 
+	'ChangementDonneur : true'
+;
+
+VueDesCartesApres1erPose:
+	'VueDesCartesApres1erPose : true'
+;
+
+DonneurPremierose:
+	'DonneurPremierose : true'
+;
+
+JeuRapide:
+	'JeuRapide : true'
+;
+
+Interception:
+	'Interception : true'
+;
+
+DeuxCartesIdentiques:
+	'DeuxCartesIdentiques : true'
+;
+
+DecisionCarte:
+	'DecisionCarte : true'
+;
+Surenchere:
+	'Surenchere : true'
+;
+
+Cartezero:
+	'Carte0 : ' value = BOOLEAN
+;
+
+Carte7:
+	'Carte7 : ' value = BOOLEAN
+;
+UnoWizz:
+	
+;
+
+UnoRapido:
+	
+;
+
+
+BOOLEAN:
+	"true" | "false"
+;
