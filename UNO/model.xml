@@ -13,7 +13,7 @@
 			<alt mandatory="true" name="UNO_Rule">
 				<graphics key="collapsed" value="false"/>
 				<and name="UnoRapido">
-					<graphics key="collapsed" value="true"/>
+					<graphics key="collapsed" value="false"/>
 					<feature mandatory="true" name="pioche"/>
 					<feature mandatory="true" name="Confusion"/>
 					<feature mandatory="true" name="Defense"/>
@@ -61,7 +61,7 @@
 					</alt>
 				</and>
 				<and name="UnoOlympique">
-					<graphics key="collapsed" value="true"/>
+					<graphics key="collapsed" value="false"/>
 					<and mandatory="true" name="TribunalPopulaire">
 						<graphics key="collapsed" value="false"/>
 						<feature mandatory="true" name="Penalité"/>
@@ -85,7 +85,7 @@
 					<feature mandatory="true" name="ValeurCarte"/>
 				</and>
 				<and name="UnoWizz">
-					<graphics key="collapsed" value="true"/>
+					<graphics key="collapsed" value="false"/>
 					<feature mandatory="true" name="presquUno"/>
 					<feature mandatory="true" name="chiffremoins"/>
 					<feature mandatory="true" name="couleurMoins"/>
@@ -98,7 +98,7 @@
 				</and>
 			</alt>
 			<alt mandatory="true" name="NombreDeJoueurs">
-				<graphics key="collapsed" value="true"/>
+				<graphics key="collapsed" value="false"/>
 				<and name="deux">
 					<feature mandatory="true" name="invers_passerTour"/>
 				</and>

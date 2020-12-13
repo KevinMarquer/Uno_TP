@@ -3,14 +3,14 @@ grammar org.xtext.example.unotext.UnoText with org.eclipse.xtext.common.Terminal
 generate unoText "http://www.xtext.org/example/unotext/UnoText"
 
 Uno:
-	uno+=Uno_Rule + nombreJoueur=NombreJoueurs;
+	uno+=Uno_Rule nombreJoueur+=NombreJoueurs;
 	
 Uno_Rule:
-	Uno_Classic | UnoOlypique | UnoWizz | UnoRapido;
+	(Uno_Classic | UnoOlypique | UnoWizz | UnoRapido);
 
 NombreJoueurs:
-		'Nombre de joueur'
-		+ Deux | "Trois" | "Quatre" | "Cinq" | "Six" | "Sept" | "Huit"
+		'Nombre de joueur : '
+		+ ( Deux | "Trois" | "Quatre" | "Cinq" | "Six" | "Sept" | "Huit")
 	;
 	
 Deux:
@@ -42,7 +42,7 @@ SpecialCard:
 ;
 
 GameOver:
-	"GameOver :"
+	"GameOver : "
 	+ ("Avoir500" | "NePasAvoir500" | "nombredeManchesGagnés")
 ;
 
@@ -68,7 +68,7 @@ Suite:
 ;
 
 UnoOlypique:
-	'UnoOlympique' 
+	'UnoOlympique : ' 
 	+ TribunalPopulaire = "TribunalPopulaire"
 	+ DistributionAleatoire = "DistributionAleatoire"
 	+ SensDefini = "SensDefini"
@@ -88,10 +88,10 @@ UnoOlypique:
 
 
 UnoWizz:
-	"UnoWizz"
-	+ presquUno = "presquUno"
-	+ chiffreMoins = "chiffreMoins"
-	+ couleurMoins =  "couleurMoins"
+	"UnoWizz : "
+	+ presquUno = "presquUno,"
+	+ chiffreMoins = "chiffreMoins,"
+	+ couleurMoins =  "couleurMoins,"
 	+ carteRouge = "carteRouge"
 	+ "carteBleue"
 	+ "echange"

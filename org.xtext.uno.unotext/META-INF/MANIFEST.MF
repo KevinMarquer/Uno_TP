@@ -8,5 +8,22 @@ Bundle-SymbolicName: org.xtext.uno.unotext; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.eclipse.xtext,
  org.eclipse.xtext.xbase,
- org.eclipse.equinox.common;bundle-version="3.5.0"
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.emf.ecore,
+ org.eclipse.xtext.xbase.lib;bundle-version="2.14.0",
+ org.eclipse.xtext.util,
+ org.eclipse.emf.common,
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
 Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: org.xtext.example.unotext.parser.antlr,
+ org.xtext.example.unotext.services,
+ org.xtext.example.unotext.unoText.util,
+ org.xtext.example.unotext.parser.antlr.internal,
+ org.xtext.example.unotext.unoText,
+ org.xtext.example.unotext.unoText.impl,
+ org.xtext.example.unotext.scoping,
+ org.xtext.example.unotext.generator,
+ org.xtext.example.unotext,
+ org.xtext.example.unotext.serializer,
+ org.xtext.example.unotext.validation
+Import-Package: org.apache.log4j

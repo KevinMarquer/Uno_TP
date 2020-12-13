@@ -1,0 +1,111 @@
+grammar org.xtext.example.unotext.UnoText with org.eclipse.xtext.common.Terminals
+
+generate unoText "http://www.xtext.org/example/unotext/UnoText"
+
+Uno:
+	uno =Uno_Rule + nombreJoueur=NombreJoueurs;
+	
+Uno_Rule:
+	(Uno_Classic | UnoOlypique | UnoWizz | UnoRapido);
+
+NombreJoueurs:
+		'Nombre de joueur : '
+		+ ( Deux | "Trois" | "Quatre" | "Cinq" | "Six" | "Sept" | "Huit")
+	;
+	
+Deux:
+	"Deux : Inverser/Passer_Tour"
+;
+	
+Uno_Classic:
+	'Uno Classic : '
+	+ (unoChallenge?= "UnoChallenge"?)
+	+ (carte0_7?="Carte0_7"?)
+	+ (carteIdentique?= CarteIdentique?)
+	+ (cumulAjout?= CumulAjout)
+	+ (suite?=Suite?)
+	+ (pioche?="Pioche"?)
+	+ (more4?="More4"?)
+	+ (tempsLimite?="tempsLimite"?)
+	+ (mauvaiseCarte?="mauvaiseCarte"?)
+	+ (equipe?="equipe"?)
+	+ (carteVisibles?="CarteVisibles")
+	+ (finManche?= FinManche?)
+	+ (threeHands?="ThreeHands"?)
+	+ (threePiles?="ThreePiles"?)
+	+ (specialCard?=SpecialCard?)
+	+ gameOver=GameOver
+;
+
+SpecialCard:
+	"SpecialCard : " + ("Roulette" | "Showdown" | "Classique")
+;
+
+GameOver:
+	"GameOver : "
+	+ ("Avoir500" | "NePasAvoir500" | "nombredeManchesGagnés")
+;
+
+FinManche:
+	"FinManche : "
+	+ ("Reste1Carte" | "Aumoins4CartesMemeChiffre")
+;
+
+CarteIdentique:
+	"CarteIdentiQUE"
+	+ (AvecCouleur?="AvecCouleur"?)
+;
+
+CumulAjout:
+	"CumulAjout"
+	+ (plus2?="PLus2"?)
+	+ (plus4?="PLus4"?)
+;
+
+Suite:
+	"Suite : "
+	+ "Simple" | "Royale"
+;
+
+UnoOlypique:
+	'UnoOlympique : ' 
+	+ TribunalPopulaire = "TribunalPopulaire"
+	+ DistributionAleatoire = "DistributionAleatoire"
+	+ SensDefini = "SensDefini"
+	+ ChangementDonneur = "ChangementDonneur"
+	+ VueDesCartesApres1erPose = "VueDesCartesApres1erPose" 
+	+ DonneurPremierose = "DonneurPremierose"
+	+ JeuRapide = "JeuRapide"
+	+ Interception = "Interception"
+	+ DeuxCartesIdentiques = "DeuxCartesIdentiques" 
+	+ DecisionCarte = "DecisionCarte"
+	+ Surenchere = "Surenchere"
+	+ (cartezero?= "Carte0"?)
+	+ (CarteSept?= "Carte7"?)
+	+ Carte2 = "Carte2"
+	+ ValeurCarte = "ValeurCarte"
+;
+
+
+UnoWizz:
+	"UnoWizz : "
+	+ presquUno = "presquUno,"
+	+ chiffreMoins = "chiffreMoins,"
+	+ couleurMoins =  "couleurMoins,"
+	+ carteRouge = "carteRouge"
+	+ "carteBleue"
+	+ "echange"
+	+ "mainVisible"
+	+ "unoWizz"
+	+ "War"
+;
+
+UnoRapido:
+	"UnoRapido"
+	+ "Pioche"
+	+ "Confusion"
+	+ "Defense"
+	+ "Rapido"
+	+ "CarteUno"
+;
+
